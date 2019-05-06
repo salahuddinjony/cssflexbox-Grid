@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS flex</title>
+<style>
+	body{
+		background-color: grey;
+		padding: 50px;
+	}
+	.container{
+		background-color:#fff;
+		padding: 50px;
+	}
+	.form-row{
+		display: flex;
+		padding: 10px;
+	}
+	.form-row input{
+		flex:6;
+		padding: 10px;
+	}
+	.form-row label{
+		padding: 10px 0px;
+		flex: 1;
+	}
+
+	.column-layout{
+		margin-top:30px;
+		background-color: #fff;
+		padding: 10px;
+	}
+	.main-column,.side-column-one,.side-column-two{
+		text-align: justify;
+		padding: 10px;
+	}
+	.col-out:nth-child(1){
+		background-color: yellow;
+	}
+	.col-out:nth-child(2){
+		background-color:tomato;
+	}
+	.col-out:nth-child(3){
+		background-color:pink;
+	}
+.col-out{
+		flex:1;
+		padding: 10px;
+		margin: 40px 0px;
+	}
+
+	.multiple-rows{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.col{
+		background-color:#2ecc71;
+		text-align: center;
+		height: 100px;
+		width: 100px;
+		line-height: 100px;
+		margin-bottom: 20px;
+	}
+
+	.simple-center{
+		background-color: #2c3e50;
+		height: 300px;
+		color: #fff;
+		display: flex;
+		
+	}
+	.simple-center{
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+	}
+	.boxes{
+		margin: 20px 0px;
+		max-height: 600px;
+		display: flex;
+		
+	}
+	.first-box{
+		padding:10px;
+		flex: 1;
+		background-color: #fff;
+	}
+	.second-box{
+		flex: 1;
+		flex-direction: column;
+		background-color:yellow;
+		display:flex;
+
+	}
+	.second-box-a{
+		flex: 1;
+		background-color: #16a085;
+	}
+	.second-box-b{
+		flex: 1;
+		background-color:#2980b9;
+	}
+/*responsive mobile and tablet*/
+@media only screen and (min-width:900px){
+	.column-layout{
+		display: flex;
+		margin-top:30px;
+		background-color: #fff;
+		padding: 10px;
+	}
+	.main-column{
+		flex: 2;
+		order: 2;
+
+	}
+	.side-column-one{
+		flex: 1;
+		order: 1;
+	}
+	.side-column-two{
+		flex: 1;
+		order:3;
+	}
+	.features-container{
+		display: flex;
+		
+	}
+	.col-out{
+		flex:1;
+		padding: 10px;
+		margin-right:20px;
+	}
+	.col-out:last-child{
+		margin-right: 0px;
+	}
+	
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="form-row">
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name" placeholder="Your name">
+		</div>
+
+		<div class="form-row">
+		<label for="email">Email:</label>
+		<input type="text" name="emil" id="email" placeholder="Your email">
+	</div>
+	</div>
+
+
+		<div class="column-layout">
+
+			<div class="main-column">
+				<h1>Main column</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+
+			<div class="side-column-one">
+				<h1>Side column one</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+				Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+				Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+			</div>
+
+			<div class="side-column-two">
+				<h1>Side column two</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+				Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+				Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+			</div>
+
+		</div>
+
+<div class="features-container">
+	<div class="col-out">
+		<h3>Feature</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+	</div>
+	<div class="col-out">
+		<h3>Feature</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+	</div>
+	<div class="col-out">
+		<h3>Feature</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+		Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+	</div>
+</div>
+<div class="multiple-rows">
+	<div class="col">1</div>
+	<div class="col">2</div>
+	<div class="col">3</div>
+	<div class="col">4</div>
+	<div class="col">5</div>
+	<div class="col">6</div>
+	<div class="col">7</div>
+	<div class="col">8</div>
+	<div class="col">9</div>
+	<div class="col">10</div>
+
+</div>
+
+<div class="simple-center">
+	<p>Vertically and horizentaly center this text</p>
+</div>
+
+<div class="boxes">
+	<div class="first-box">
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		
+	</div>
+	<div class="second-box">
+		<div class="second-box-a"></div>
+		<div class="second-box-b"></div>
+	</div>
+</div>
+ 
+</body>
+</html>
